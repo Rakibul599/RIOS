@@ -18,7 +18,15 @@ void start_kernel() {
 
     print_string("Initializing keyboard (IRQ 1).\n");
     init_keyboard();
-
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
+    print_string("*****************Welcome to RIOS***********************\n");
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
+    print_string("*******************************************************\n");
     
     print_string("> ");
 }
@@ -115,11 +123,10 @@ void execute_command(char *input) {
     else if(compare_string(input, "SUM")==0)
     {
     	
-    	//print_string(input);
-    	//print_string(input);
+
     	float ans=compare(input,"sum");
     	print_float(ans); 
-    //print_string("\nsum\n");
+        print_string("\n> ");
     }
     else if(compare_string(input, "SUB") == 0)
     {
@@ -148,6 +155,7 @@ void execute_command(char *input) {
     else if(compare_string(input, "CLR") == 0)
     {
     clear_screen();
+    print_string("\n> ");
     }
     
     else if (compare_string(input, "") == 0) {
